@@ -23,6 +23,8 @@
   <div class="bg bg3"></div>
   <div class="container">
   
+  <form method="post" action="StudentRegisterForm.php">
+    
    <!-- Nhập tên hoạt động -->
    <div class="row">
     <div class="col">
@@ -85,18 +87,41 @@
    
   <!-- Form's Fields Selection -->
   <!-- Block level -->
-  <div class="row">
-    <div class="col">
-      <label for="FieldDataList" class="form-label"><strong>Chọn các field cần có trong form đăng ký</strong></label>
-          <input class="form-control" list="FieldOptions" id="FieldDataList" placeholder="Type to search...">
-          <datalist id="FieldOptions">
-            <option value="Họ và tên">
-            <option value="MSSV">
-            <option value="Ngành">
-            <option value="Khoa">
-          </datalist>
+    <div class="row">
+      <div class="col">
+        <label for="FieldDataList" class="form-label"><strong>Chọn các field cần có trong form đăng ký</strong></label>
+            <input class="form-control" list="FieldOptions" id="RegisterFormFields" placeholder="Type to search..." name="RegisterFormFields">
+            <datalist id="FieldOptions">
+              <option value="Họ và tên">
+              <option value="MSSV">
+              <option value="Ngành">
+              <option value="Khoa">
+            </datalist>
+      </div>
     </div>
-  </div>
+  
+ <div class="row">
+      <div class="col">
+             <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="RegisterFormFields" value="Ho va ten" id="RegisterFormFields">
+              <label class="form-check-label" for="RegisterFormFields">
+                Họ và tên
+              </label>
+              <input class="form-check-input" type="checkbox" name="RegisterFormFields" value="MSSV" id="RegisterFormFields">
+              <label class="form-check-label" for="RegisterFormFields">
+                MSSV
+              </label>
+              <input class="form-check-input" type="checkbox" name="RegisterFormFields" value="Nganh" id="RegisterFormFields">
+              <label class="form-check-label" for="RegisterFormFields">
+                Ngành
+              </label>
+              <input class="form-check-input" type="checkbox" name="RegisterFormFields" value="Khoa" id="RegisterFormFields">
+              <label class="form-check-label" for="RegisterFormFields">
+                Khoa
+              </label>
+            </div>
+      </div>
+ </div>
   
   <br><br>
     
@@ -128,7 +153,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
    
-  </div>  
+  </div>
+ </form>
 </body>
 
 </html>
